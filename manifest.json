@@ -1,15 +1,17 @@
 {
-
-    "manifest_version":2,
-    "name": "Social Media Blocker",
-    "version": "1.0.0",
-    "content_scripts":[
-        {
-            "matches": ["<all_urls>"],
-            "js":["Content.js"] 
-
-        }
-        
-    ]
-
+  "manifest_version": 3,
+  "name": "Social Media Blocker",
+  "version": "1.0.0",
+  "description": "Blocks access to social media sites.",
+  "permissions": ["scripting"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["Content.js"]
+    }
+  ],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_title": "Social Media Blocker"
+  }
 }
